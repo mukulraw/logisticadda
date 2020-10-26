@@ -13,7 +13,7 @@
     <item
         android:title="ABOUT US"
         app:showAsAction="always"
-        android:icon="@drawable/ic_technical_support"
+        android:icon="@drawable/ic_about"
         android:id="@+id/action_search"
         android:enabled="true"
         />
@@ -29,7 +29,7 @@
     <item
         android:title="ADVERTISE"
         app:showAsAction="always"
-        android:icon="@drawable/ic_technical_support"
+        android:icon="@drawable/ic_megaphone"
         android:id="@+id/action_cart"
         android:enabled="true"
         />
@@ -37,7 +37,7 @@
     <item
         android:title="BLOG"
         app:showAsAction="always"
-        android:icon="@drawable/ic_technical_support"
+        android:icon="@drawable/ic_title"
         android:id="@+id/action_orders"
         android:enabled="true"
         />
