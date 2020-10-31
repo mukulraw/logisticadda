@@ -1,23 +1,12 @@
 package com.freerentbuy.app;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class Web extends Fragment implements AdvancedWebView.Listener {
+public class Sell extends Fragment implements AdvancedWebView.Listener {
 
     AdvancedWebView mWebView;
 
@@ -38,7 +27,7 @@ public class Web extends Fragment implements AdvancedWebView.Listener {
 
         mWebView.setListener(getActivity(), this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/");
+        mWebView.loadUrl("http://freerentbuy.com/dashboard");
 
         return view;
     }
@@ -74,18 +63,24 @@ public class Web extends Fragment implements AdvancedWebView.Listener {
     }
 
     @Override
-    public void onPageStarted(String url, Bitmap favicon) { }
+    public void onPageStarted(String url, Bitmap favicon) {
+    }
 
     @Override
-    public void onPageFinished(String url) { }
+    public void onPageFinished(String url) {
+    }
 
     @Override
-    public void onPageError(int errorCode, String description, String failingUrl) { }
+    public void onPageError(int errorCode, String description, String failingUrl) {
+    }
 
     @Override
-    public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) { }
+    public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) {
+    }
 
     @Override
-    public void onExternalPageRequest(String url) { }
+    public void onExternalPageRequest(String url) {
+    }
+
 
 }

@@ -1,11 +1,7 @@
 package com.freerentbuy.app;
 
-import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -17,10 +13,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class MainActivity extends AppCompatActivity implements AdvancedWebView.Listener  {
+public class LoginActivity extends AppCompatActivity implements AdvancedWebView.Listener {
 
     BottomNavigationView navigation;
     AdvancedWebView mWebView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,37 +29,34 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/");
+        mWebView.loadUrl("http://freerentbuy.com/user/auth");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finishAffinity();
                         break;
                     case R.id.action_blog:
-
-                        Intent intent = new Intent(MainActivity.this, SellActivity.class);
-                        startActivity(intent);
+                        Intent intent2 = new Intent(LoginActivity.this, SellActivity.class);
+                        startActivity(intent2);
                         finishAffinity();
 
                         break;
                     case R.id.action_orders:
-                        Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
-                        startActivity(intent2);
-                        finishAffinity();
+
                         break;
                 }
                 return true;
             }
         });
 
-        navigation.setSelectedItemId(R.id.action_home);
+        navigation.setSelectedItemId(R.id.action_orders);
 
     }
-
-
     @SuppressLint("NewApi")
     @Override
     protected void onResume() {
@@ -114,4 +108,5 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
 
     @Override
     public void onExternalPageRequest(String url) { }
+
 }
