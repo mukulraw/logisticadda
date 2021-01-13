@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("https://logisticadda.in/");
+        mWebView.loadUrl("https://www.logisticadda.in/");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
