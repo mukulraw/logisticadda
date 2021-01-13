@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class Blog extends Fragment implements AdvancedWebView.Listener {
+public class Login extends Fragment implements AdvancedWebView.Listener {
 
     AdvancedWebView mWebView;
 
@@ -27,7 +27,7 @@ public class Blog extends Fragment implements AdvancedWebView.Listener {
 
         mWebView.setListener(getActivity(), this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/blog");
+        mWebView.loadUrl("http://freerentbuy.com/user/auth");
 
         return view;
     }

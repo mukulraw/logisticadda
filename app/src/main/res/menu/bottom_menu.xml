@@ -5,13 +5,13 @@
     <item
         android:title="HOME"
         app:showAsAction="always"
-        android:icon="@drawable/headerlogo2"
+        android:icon="@drawable/logo"
         android:id="@+id/action_home"
         android:enabled="true"
         />
 
     <item
-        android:title="SELL PROPERTY"
+        android:title="CONTACT US"
         app:showAsAction="always"
         android:icon="@drawable/ic_technical_support"
         android:id="@+id/action_blog"
@@ -19,7 +19,7 @@
         />
 
     <item
-        android:title="LOGIN"
+        android:title="BLOG"
         app:showAsAction="always"
         android:icon="@drawable/ic_title"
         android:id="@+id/action_orders"

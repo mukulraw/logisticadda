@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 

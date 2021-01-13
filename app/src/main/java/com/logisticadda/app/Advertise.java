@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

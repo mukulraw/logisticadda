@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements AdvancedWebView.
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/user/auth");
+        mWebView.loadUrl("https://www.logisticadda.in/blog/");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

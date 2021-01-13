@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class Sell extends Fragment implements AdvancedWebView.Listener {
+public class Blog extends Fragment implements AdvancedWebView.Listener {
 
     AdvancedWebView mWebView;
 
@@ -27,7 +27,7 @@ public class Sell extends Fragment implements AdvancedWebView.Listener {
 
         mWebView.setListener(getActivity(), this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/dashboard");
+        mWebView.loadUrl("http://freerentbuy.com/blog");
 
         return view;
     }
@@ -63,24 +63,21 @@ public class Sell extends Fragment implements AdvancedWebView.Listener {
     }
 
     @Override
-    public void onPageStarted(String url, Bitmap favicon) {
-    }
+    public void onPageStarted(String url, Bitmap favicon) { }
 
     @Override
-    public void onPageFinished(String url) {
-    }
+    public void onPageFinished(String url) { }
 
     @Override
-    public void onPageError(int errorCode, String description, String failingUrl) {
-    }
+    public void onPageError(int errorCode, String description, String failingUrl) { }
 
     @Override
-    public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) {
-    }
+    public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) { }
 
     @Override
-    public void onExternalPageRequest(String url) {
-    }
+    public void onExternalPageRequest(String url) { }
+
+
 
 
 }

@@ -1,4 +1,4 @@
-package com.freerentbuy.app;
+package com.logisticadda.app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,11 +13,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class SellActivity extends AppCompatActivity implements AdvancedWebView.Listener {
+public class MainActivity extends AppCompatActivity implements AdvancedWebView.Listener  {
 
     BottomNavigationView navigation;
     AdvancedWebView mWebView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,23 +28,24 @@ public class SellActivity extends AppCompatActivity implements AdvancedWebView.L
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("http://freerentbuy.com/dashboard");
+        mWebView.loadUrl("https://logisticadda.in/");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Intent intent = new Intent(SellActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finishAffinity();
+
                         break;
                     case R.id.action_blog:
 
+                        Intent intent = new Intent(MainActivity.this, SellActivity.class);
+                        startActivity(intent);
+                        finishAffinity();
 
                         break;
                     case R.id.action_orders:
-                        Intent intent2 = new Intent(SellActivity.this, LoginActivity.class);
+                        Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
                         startActivity(intent2);
                         finishAffinity();
                         break;
@@ -54,9 +54,11 @@ public class SellActivity extends AppCompatActivity implements AdvancedWebView.L
             }
         });
 
-        navigation.setSelectedItemId(R.id.action_blog);
+        navigation.setSelectedItemId(R.id.action_home);
 
     }
+
+
     @SuppressLint("NewApi")
     @Override
     protected void onResume() {
@@ -108,5 +110,4 @@ public class SellActivity extends AppCompatActivity implements AdvancedWebView.L
 
     @Override
     public void onExternalPageRequest(String url) { }
-
 }
