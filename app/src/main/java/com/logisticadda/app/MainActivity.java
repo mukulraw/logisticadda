@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
 
     BottomNavigationView navigation;
     AdvancedWebView mWebView;
+    ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
 
         navigation = findViewById(R.id.bottomNavigationView);
         mWebView = findViewById(R.id.replace);
+        progress = findViewById(R.id.progressBar);
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
                 return true;
             }
         });
-
+        progress.setVisibility(View.VISIBLE);
         navigation.setSelectedItemId(R.id.action_home);
 
     }
@@ -97,10 +101,14 @@ public class MainActivity extends AppCompatActivity implements AdvancedWebView.L
     }
 
     @Override
-    public void onPageStarted(String url, Bitmap favicon) { }
+    public void onPageStarted(String url, Bitmap favicon) {
+        progress.setVisibility(View.VISIBLE);
+    }
 
     @Override
-    public void onPageFinished(String url) { }
+    public void onPageFinished(String url) {
+        progress.setVisibility(View.GONE);
+    }
 
     @Override
     public void onPageError(int errorCode, String description, String failingUrl) { }
