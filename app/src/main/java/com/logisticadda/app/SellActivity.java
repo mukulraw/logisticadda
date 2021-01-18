@@ -32,7 +32,7 @@ public class SellActivity extends AppCompatActivity implements AdvancedWebView.L
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("https://www.logisticadda.in/contact-us/");
+        mWebView.loadUrl("https://www.logisticadda.in/member-login/");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

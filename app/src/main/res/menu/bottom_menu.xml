@@ -11,17 +11,17 @@
         />
 
     <item
-        android:title="CONTACT US"
+        android:title="LOGIN"
         app:showAsAction="always"
-        android:icon="@drawable/ic_technical_support"
+        android:icon="@drawable/ic_enter"
         android:id="@+id/action_blog"
         android:enabled="true"
         />
 
     <item
-        android:title="BLOG"
+        android:title="PAYMENT"
         app:showAsAction="always"
-        android:icon="@drawable/ic_title"
+        android:icon="@drawable/ic_rupee"
         android:id="@+id/action_orders"
         android:enabled="true"
         />

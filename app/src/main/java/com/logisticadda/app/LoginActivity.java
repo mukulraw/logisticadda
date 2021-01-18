@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements AdvancedWebView.
 
         mWebView.setListener(this, this);
         mWebView.setMixedContentAllowed(false);
-        mWebView.loadUrl("https://www.logisticadda.in/blog/");
+        mWebView.loadUrl("https://www.logisticadda.in/payment");
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
